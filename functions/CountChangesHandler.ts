@@ -13,13 +13,10 @@ function countDaily(date: string)
 function countWeekly(date: string) 
 {
   const now = new Date();
-  const daysSinceMonday = now.getDay() === 0 ? 6 : now.getDay() - 1; //count how many days has it been since Monday
-  const monday = new Date(); //get the date of the most recent Monday at midnight
-  monday.setDate(now.getDate() - daysSinceMonday);
-  monday.setHours(0, 0, 0, 0);
+  const lastWeek = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 7);
 
   const date_formatted = new Date(String(date));
-  return (date_formatted >= monday && date_formatted <= now) ? true : false;
+  return (date_formatted >= lastWeek && date_formatted <= now) ? true : false;
 }
 
 function countMonthly(date: string) 
