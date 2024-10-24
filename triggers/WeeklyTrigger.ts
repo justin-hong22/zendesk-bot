@@ -12,12 +12,12 @@ const WeeklyTrigger: ScheduledTrigger<typeof WeeklyWorkflow.definition> = {
     },
   },
   schedule: {
-    start_time: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate() + 1, 0, 0, 0, 0).toISOString(),
+    start_time: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate() + 1, 2, 0, 0, 0).toISOString(),
     timezone: "Asia/Tokyo",
     frequency: { 
       type: "weekly", 
       repeats_every: 1, 
-      on_days: ["Thursday"] 
+      on_days: ["Friday"],
     },
   },
 };
