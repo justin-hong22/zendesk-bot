@@ -12,11 +12,11 @@ const MonthlyTrigger: ScheduledTrigger<typeof MonthlyWorkflow.definition> = {
     },
   },
   schedule: {
-    start_time: new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0, 0, 0, 0, 0).toISOString(),
+    start_time: new Date(new Date().getFullYear(), new Date().getMonth() + 1, 1, 2, 0, 0, 0).toISOString(),
     timezone: "Asia/Tokyo",
     frequency: { 
       type: "monthly", 
-      repeats_every: 1 
+      repeats_every: 1,
     },
   },
 };
